@@ -3,7 +3,8 @@
 @section('content')
     <h1>Dashboard</h1>
 
-<a href="{{url('/register') }}">Registrar nuevo producto</a>
+<a href="{{url('/register_product') }}">Registrar nuevo producto</a>
+<a href="{{url('/sucursales') }}">Ver sucursales</a>
 <table>
     <tr>
         <th>Código</th>
@@ -25,8 +26,8 @@
         <td></td>
         <td></td>
         <td>
-            <a href="{{ url('/update') }}">Editar</a>
-            <a href="{{ url('/delete') }}">Eliminar</a> 
+            <a href="{{ url('/update_product') }}">Editar</a>
+            <a href="{{ url('/delete_product') }}">Eliminar</a> 
         </td>
     </tr>
 </table>
