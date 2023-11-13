@@ -5,8 +5,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Laravel</title>
-
+    <title>Gestion de Stock</title>
+         <link rel="stylesheet" href="{{ asset('css/app.css') }}">
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -20,24 +20,30 @@
 </head>
 
 <body>
+ <div class="d-flex flex-column min-vh-100">
     @section('header')
-        <nav class="navbar bg-body-tertiary">
-            <div class="container">
-                <a class="navbar-brand" href="#">
-                    <img src="/docs/5.3/assets/brand/bootstrap-logo.svg" alt="Control de stock" width="30"
-                        height="24">
-                </a>
-                <div> <a href="{{ url('/login') }} ">Login</a></div>
-            </div>
-        </nav>
-    @show
-    
+      <nav class="navbar navbar-dark bg-primary">
     <div class="container">
+        <a class="navbar-brand" href="/">
+            <span>Control de Stock</span>
+        </a>
+        <div><a href="{{ url('/login') }}" class="text-light">Login</a></div>
+    </div>
+</nav>
+
+    @show
+
+    <div class="container  flex-grow-1">
         @yield('content')
     </div>
+
     @section('footer')
-        <p>Made with love</p>
+        <div class="footer mt-auto">
+            <p>Made with love</p>
+        </div>
     @show
+</div>
+
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
         integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous">
     </script>
