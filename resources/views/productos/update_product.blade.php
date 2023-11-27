@@ -16,8 +16,8 @@
             </div>
 
             <div class="mb-3">
-                <label for="categoria" class="form-label">Categoría</label>
-                <input type="text" class="form-control" id="categoria" name="categoria" value="">
+                <label for="precio" class="form-label">Precio</label>
+                <input type="text" class="form-control" id="precio" name="precio" value="">
             </div>
 
             <div class="mb-3">
@@ -31,18 +31,8 @@
             </div>
 
             <div class="mb-3">
-                <label for="descripcion" class="form-label">Descripción</label>
-                <textarea class="form-control" id="descripcion" name="descripcion" rows="3"></textarea>
-            </div>
-
-            <div class="mb-3">
-                <label for="cantidad" class="form-label">Cantidad</label>
-                <input type="number" class="form-control" id="cantidad" name="cantidad" value="">
-            </div>
-
-            <div class="mb-3">
-                <label for="precio_venta" class="form-label">Precio Venta</label>
-                <input type="text" class="form-control" id="precio_venta" name="precio_venta" value="">
+                <label for="stock" class="form-label">Stock</label>
+                <input type="number" class="form-control" id="stock" name="stock" value="">
             </div>
 
             <button type="submit" class="btn btn-primary">Guardar Cambios</button>

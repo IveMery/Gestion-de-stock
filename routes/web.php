@@ -4,23 +4,25 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProductoController;
 use App\Http\Controllers\SucursalController;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\DetallesController;
+use App\Http\Controllers\VentasController;
+use App\Models\DetalleVenta;
 
 Route::get('/', function () {
     return view('layouts/master');
 });
 
 //Productos
+Route::resource('/productos', ProductoController::class);
 
-Route::get('/register_product', [ProductoController::class, 'registerProduct'])->name('register.product');
-Route::get('/update_product', [ProductoController::class, 'updateProduct'])->name('update.product');
-Route::get('/delete_product', [ProductoController::class, 'deleteProduct'])->name('delete.product');
-Route::get('/dashboard', [ProductoController::class, 'listProduct'])->name('list.product');
+//Ventas
+Route::resource('/ventas', VentasController::class);
+
+//Detalles
+Route::resource('/detalles',DetallesController::class);
 
 //Sucursales
-Route::get('/sucursales', [SucursalController::class, 'index'])->name('sucursales.index');
-Route::get('/sucursales/create', [SucursalController::class, 'create'])->name('sucursales.create');
-Route::get('/sucursales/update', [SucursalController::class, 'update'])->name('sucursales.update');//id
-Route::delete('/sucursales/{id}', [SucursalController::class, 'destroy'])->name('sucursales.destroy');//id
+Route::resource('/sucursal',SucursalController::class);
 
 // Rutas de autenticación
 Route::get('/login', [AuthController::class, 'showLoginForm'])->name('login');

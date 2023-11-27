@@ -16,7 +16,7 @@ class InsertarClientes extends Seeder
     {
         DB::table('clientes')->insert([
             ['cliente_nombre' => 'Ivette Mery', 'cliente_fono' => 777777777],
-            ['cliente_nombre' => 'Ana Barraxa', 'cliente_fono' => 888888888],
+            ['cliente_nombre' => 'Ana Barraza', 'cliente_fono' => 888888888],
             ['cliente_nombre' => 'Cristobal Peluso', 'cliente_fono' => 99999999],
         ]);
         

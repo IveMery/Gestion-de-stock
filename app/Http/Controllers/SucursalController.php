@@ -16,16 +16,5 @@ class SucursalController extends Controller
         return view('sucursales.create', );
     }
 
-    public function update()//id
-    {
-        
-
-        return view('sucursales.update');
+ 
     }
-
-    public function destroy()//id
-    {
-       
-       //
-    }
-}
