@@ -18,7 +18,7 @@ class AsociarProductosASucursales extends Seeder
         for ($productoId = 1; $productoId <= 100; $productoId++) {
             DB::table('productosucursales')->insert([
                 'producto_id' => $productoId,
-                'sucursal_id' => rand(1, 2), 
+                'sucursal_id' => rand(1, 3), 
             ]);
         }
     }

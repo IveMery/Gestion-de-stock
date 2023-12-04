@@ -30,7 +30,7 @@
         <a class="navbar-brand" href="/">
             <span>Control de Stock</span>
         </a>
-        {{-- <div><a href="{{ url('/login') }}" class="text-light">Login</a></div> --}}
+       
     </div>
 </nav>
 

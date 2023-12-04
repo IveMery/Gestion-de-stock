@@ -7,6 +7,8 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\DetallesController;
 use App\Http\Controllers\VentasController;
 use App\Models\DetalleVenta;
+use Illuminate\Support\Facades\Auth;
+
 
 Route::get('/', function () {
     return view('layouts/master');
@@ -19,16 +21,12 @@ Route::resource('/productos', ProductoController::class);
 Route::resource('/ventas', VentasController::class);
 
 //Detalles
-Route::resource('/detalles',DetallesController::class);
+Route::resource('/detalles', DetallesController::class);
 
 //Sucursales
-Route::resource('/sucursales',SucursalController::class);
+Route::resource('/sucursales', SucursalController::class);
 
-// Rutas de autenticación
-// Route::get('/login', [AuthController::class, 'showLoginForm'])->name('login');
-// Route::post('/login', [AuthController::class, 'login']);
-// Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
+Auth::routes();
 
 
-
-
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
