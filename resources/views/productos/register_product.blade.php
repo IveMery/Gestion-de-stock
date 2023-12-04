@@ -29,9 +29,9 @@
             <div class="mb-3">
                 <label for="sucursal" class="form-label">Sucursal</label>
                 <select class="form-select" id="sucursal" name="sucursal">
-                    <option value="sucursal1">Sucursal 1</option>
-                    <option value="sucursal2">Sucursal 2</option>
-                    <option value="sucursal3">Sucursal 3</option>
+                    @foreach($sucursales as $sucursal)
+                        <option value="{{ $sucursal->sucursal_id }}">{{ $sucursal->sucursal_nombre }}</option>
+                    @endforeach
                 </select>
             </div>
 

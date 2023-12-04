@@ -18,4 +18,10 @@ class Producto extends Model
         //relacion 1 a muchos con la clase detalleventa
         return $this->hasMany(DetalleVenta::class,'producto_id','producto_id');
     }
+    
+    // Relación con ProductoSucursal 1 a muchos
+    public function productosSucursales()
+    {
+        return $this->hasMany(ProductoSucursal::class, 'producto_id', 'producto_id');
+    }
 }

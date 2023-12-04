@@ -18,8 +18,8 @@ class InsertarProductos extends Seeder
         for ($i=0; $i < 100; $i++) { 
             DB::table('productos') -> insert([
                 'producto_nombre' => 'Producto ' . $i,
-                'producto_precio' => rand(10, 100),
-                'producto_stock' => rand(1, 50),
+                'producto_precio' => rand(1000, 100000),
+                'producto_stock' => rand(1, 150),
             ]);
         }
     }

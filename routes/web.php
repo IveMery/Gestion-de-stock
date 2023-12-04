@@ -22,12 +22,12 @@ Route::resource('/ventas', VentasController::class);
 Route::resource('/detalles',DetallesController::class);
 
 //Sucursales
-Route::resource('/sucursal',SucursalController::class);
+Route::resource('/sucursales',SucursalController::class);
 
 // Rutas de autenticación
-Route::get('/login', [AuthController::class, 'showLoginForm'])->name('login');
-Route::post('/login', [AuthController::class, 'login']);
-Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
+// Route::get('/login', [AuthController::class, 'showLoginForm'])->name('login');
+// Route::post('/login', [AuthController::class, 'login']);
+// Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
 
 
 

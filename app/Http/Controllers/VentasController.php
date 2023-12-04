@@ -38,5 +38,5 @@ class VentasController extends Controller
     return redirect()->route('ventas.index')->with('success', 'Venta registrada exitosamente');
 }
 
-   
+ 
 }
