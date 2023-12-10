@@ -4,11 +4,15 @@
     <div class="container mt-4">
         <h2>Listado de Sucursales</h2>
         @if (session('success'))
-            <div class="alert alert-success mt-3" id="successAlertSucursal" role="alert">
+            <div class="alert alert-success mt-3 alertSucursal" role="alert">
                 {{ session('success') }}
             </div>
         @endif
-
+        @if (session('error'))
+            <div class="alert alert-danger mt-3 alertSucursal" role="alert">
+                {{ session('error') }}
+            </div>
+        @endif
         <table class="table">
             <thead>
                 <tr>
@@ -74,7 +78,10 @@
     </script>
     <script>
         setTimeout(function() {
-            document.getElementById('successAlertSucursal').style.display = 'none';
+            var alertElements = document.querySelectorAll('.alertSucursal');
+            alertElements.forEach(function(element) {
+                element.style.display = 'none';
+            });
         }, 3000);
     </script>
 @endsection

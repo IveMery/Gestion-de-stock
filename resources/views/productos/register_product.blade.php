@@ -4,7 +4,7 @@
     <div class="container mt-4">
         <h2>Registrar Nuevo Producto</h2>
 
-        <form action="{{ url('/productos') }}" method="POST">
+        <form id="product-form" action="{{ url('/productos') }}" method="POST">
             @csrf
             <div class="mb-3">
                 <label for="nombre" class="form-label">Nombre</label>
@@ -48,5 +48,21 @@
             <button type="submit" class="btn btn-primary">Registrar Producto</button>
         </form>
     </div>
+   
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        document.getElementById("product-form").addEventListener("submit", function (event) {
+            var nombre = document.getElementById("nombre").value;
+            var precio = document.getElementById("precio").value;
+            var stock = document.getElementById("stock").value;
+
+            if (nombre.trim() === "" || isNaN(precio) || precio < 0 || isNaN(stock) || stock < 0) {
+                alert("Por favor, ingrese datos válidos en todos los campos.");
+                event.preventDefault();
+            }
+        });
+    });
+</script>
+
 @endsection
 
