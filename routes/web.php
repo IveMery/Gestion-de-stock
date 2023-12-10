@@ -9,24 +9,19 @@ use App\Http\Controllers\VentasController;
 use App\Models\DetalleVenta;
 use Illuminate\Support\Facades\Auth;
 
+Route::group(['middleware' => 'checklogin'], function () {
+    Route::resource('/productos', ProductoController::class);
+    Route::resource('/ventas', VentasController::class);
+    Route::resource('/detalles', DetallesController::class);
+    Route::resource('/sucursales', SucursalController::class);
 
+});   
+
+
+// ruta principal
 Route::get('/', function () {
-    return view('layouts/master');
-});
-
-//Productos
-Route::resource('/productos', ProductoController::class);
-
-//Ventas
-Route::resource('/ventas', VentasController::class);
-
-//Detalles
-Route::resource('/detalles', DetallesController::class);
-
-//Sucursales
-Route::resource('/sucursales', SucursalController::class);
+    return view('layouts/welcome');
+})->middleware('guest'); 
 
 Auth::routes();
-
-
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
