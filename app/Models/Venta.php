@@ -12,6 +12,8 @@ class Venta extends Model
     protected $primaryKey = 'venta_id';
 
     public $timestamps = true;
+    protected $fillable = ['venta_fecha', 'venta_total', 'cliente_id'];
+
 
     //relacion con cliente muchos a 1
 

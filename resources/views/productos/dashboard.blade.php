@@ -13,7 +13,9 @@
         </form>
 
         <a class="btn btn-primary" href="{{ url('productos/create') }}">Registrar nuevo producto</a>
-        <a class="btn btn-secondary" href="{{ url('sucursales') }}">Ver sucursales</a>
+        <a class="btn btn-info" href="{{ url('sucursales') }}">Ver sucursales</a>
+        <a class="btn btn-success" href="{{ url('ventas') }}">Ventas</a>
+        <a class="btn btn-warning" href="{{ url('detalles') }}">Detalles Venta</a>
         @if(session('success'))
             <div class="alert alert-success mt-3" id="successAlert" role="alert">
                 {{ session('success') }}

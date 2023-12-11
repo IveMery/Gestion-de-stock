@@ -13,7 +13,10 @@ class DetalleVenta extends Model
     protected $primaryKey = 'detalleventa_id';
 
     public $timestamps = true;
-
+    protected $fillable = [
+        'producto_id',
+       
+    ];
     //relacion con productos muchos a 1
     public function producto(){
         return $this->belongsTo(Producto::class,'producto_id');

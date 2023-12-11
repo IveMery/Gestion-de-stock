@@ -18,7 +18,7 @@
                     <tr>
                         <th scope="row">{{ $detalle->detalleventa_id }}</th>
                         <td>{{ $detalle->venta_id }}</td>
-                        <td>{{ $detalle->producto_id }}</td>
+                       <td>{{ $detalle->producto->producto_nombre }}</td>
                         <td>{{ $detalle->created_at }}</td>
                         <td>{{ $detalle->updated_at }}</td>
                     </tr>
