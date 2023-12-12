@@ -30,4 +30,5 @@ Mantén tu inventario actualizado con la capacidad de modificar:
 
 ### Seguridad con Login
 Protege tu sistema con un sistema de login. ¡Mantén tus datos seguros!
+![Screeshot del Proyecto](https://github.com/IveMery/Gestion-de-stock/raw/main/Screenshot%202023-12-11%20211018.png)
 
